@@ -1,4 +1,4 @@
-package org.example.concertation
+package org.kkvc.concertation
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"

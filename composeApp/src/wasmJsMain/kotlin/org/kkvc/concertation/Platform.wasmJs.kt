@@ -1,4 +1,4 @@
-package org.example.concertation
+package org.kkvc.concertation
 
 class WasmPlatform: Platform {
     override val name: String = "Web with Kotlin/Wasm"

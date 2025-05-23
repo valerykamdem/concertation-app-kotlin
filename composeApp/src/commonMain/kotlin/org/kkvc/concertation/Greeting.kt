@@ -1,4 +1,4 @@
-package org.example.concertation
+package org.kkvc.concertation
 
 class Greeting {
     private val platform = getPlatform()

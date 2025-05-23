@@ -1,4 +1,4 @@
-package org.example.concertation
+package org.kkvc.concertation
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

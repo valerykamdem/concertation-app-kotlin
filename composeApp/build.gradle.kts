@@ -59,6 +59,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.accompanist.systemuicontroller) // Vérifiez la dernière version sur Maven Central
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -69,6 +70,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation(compose.materialIconsExtended)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -81,11 +83,11 @@ kotlin {
 }
 
 android {
-    namespace = "org.example.concertation"
+    namespace = "org.kkvc.concertation"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "org.example.concertation"
+        applicationId = "org.kkvc.concertation"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -113,11 +115,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "org.example.concertation.MainKt"
+        mainClass = "org.kkvc.concertation.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "org.example.concertation"
+            packageName = "org.kkvc.concertation"
             packageVersion = "1.0.0"
         }
     }
